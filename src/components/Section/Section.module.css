@@ -1,0 +1,12 @@
+.section {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #475a6a;
+}
