@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import Section from 'components/Section';
-import Phonebook from 'components/Phonebook';
+import Phonebook from 'components/ContactsForm';
 import Filter from './Filter/Filter';
 import Contacts from 'components/Contacts';
-import useLocalStorage from 'Hooks';
+import useLocalStorage from 'hooks';
 
 export const App = () => {
   const [contacts, setContacts] = useLocalStorage('contacts', []);

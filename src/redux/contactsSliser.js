@@ -7,20 +7,18 @@ const contactsSlicer = createSlice({
   initialState: contactsInitialState,
   reducers: {
     addContact: {
-      reduser(state, action) {
-        return;
+      reduser: (state, action) => {
+        return [...state, action.payload];
       },
-      prepare(name, phone) {
-        return {
-          payload: {
-            name,
-            phone,
-            id: nanoid(5),
-          },
-        };
+      prepare: (name, number) => {
+        const id = nanoid(5);
+        return { payload: { id, name, number } };
       },
     },
-    deleteContact: (state, action) =>
-      state.filter(contact => contact.id !== action.payload),
   },
+  deleteContact: (state, action) =>
+    state.filter(contact => contact.id !== action.payload),
 });
+
+export const { addContact, deleteContact } = contactsSlicer.actions;
+export const contactsReduser = contactsSlicer.reducer;

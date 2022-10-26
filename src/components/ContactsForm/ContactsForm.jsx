@@ -1,10 +1,14 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addContact } from 'redux/contactsSliser';
 import PropTypes from 'prop-types';
-import css from 'components/Phonebook/Phonebook.module.css';
+import css from 'components/ContactsForm/ContactsForm.module.css';
 
-export default function Phonebook({ onSubmit }) {
+export default function ContactsForm({ onSubmit }) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+
+  const dispatch = useDispatch();
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -24,7 +28,11 @@ export default function Phonebook({ onSubmit }) {
   const handleSubmit = e => {
     e.preventDefault();
 
-    onSubmit({ name, number });
+    console.log(name, number);
+    console.log(addContact());
+    dispatch(addContact(name, number));
+
+    // onSubmit({ name, number });
     reset();
   };
 
@@ -69,6 +77,6 @@ export default function Phonebook({ onSubmit }) {
   );
 }
 
-Phonebook.propTypes = {
+ContactsForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
