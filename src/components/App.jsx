@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { Layout } from './Layout/Layout';
 import { ContactsForm } from './ContactsForm/ContactsForm';
-import Filter from './Filter/Filter';
+import { Filter } from './Filter/Filter';
 import { ContactsList } from './ContactsList/ContactsList';
 import useLocalStorage from 'hooks';
 
@@ -48,10 +48,7 @@ export const App = () => {
       <Layout>
         <ContactsForm onSubmit={formSubmitHandler} />
         <Filter value={filter} changeFilter={changeFilter} />
-        <ContactsList
-          contacts={getVisibleContacts()}
-          onDeleteContact={deleteContact}
-        />
+        <ContactsList />
       </Layout>
     </>
   );
