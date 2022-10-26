@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import css from 'components/Contact/Contact.module.css';
+import css from 'components/ContactsItem/ContactsItem.module.css';
 
-const Contact = ({ name, number, deleteContact }) => (
+export const ContactsItem = ({ name, number, deleteContact }) => (
   <li className={css.contacts__item}>
     <p>
       {name}: {number}
@@ -12,10 +12,8 @@ const Contact = ({ name, number, deleteContact }) => (
   </li>
 );
 
-Contact.propTypes = {
+ContactsItem.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
   deleteContact: PropTypes.func.isRequired,
 };
-
-export default Contact;

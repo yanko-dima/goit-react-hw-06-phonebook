@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
-import Section from 'components/Section';
-import Phonebook from 'components/ContactsForm';
+import { Layout } from './Layout/Layout';
+import { ContactsForm } from './ContactsForm/ContactsForm';
 import Filter from './Filter/Filter';
-import Contacts from 'components/Contacts';
+import { ContactsList } from './ContactsList/ContactsList';
 import useLocalStorage from 'hooks';
 
 export const App = () => {
@@ -45,16 +45,14 @@ export const App = () => {
 
   return (
     <>
-      <Section title={'Phonebook'}>
-        <Phonebook onSubmit={formSubmitHandler} />
-      </Section>
-      <Section title={'Contacts'}>
+      <Layout>
+        <ContactsForm onSubmit={formSubmitHandler} />
         <Filter value={filter} changeFilter={changeFilter} />
-        <Contacts
+        <ContactsList
           contacts={getVisibleContacts()}
           onDeleteContact={deleteContact}
         />
-      </Section>
+      </Layout>
     </>
   );
 };

@@ -4,7 +4,7 @@ import { addContact } from 'redux/contactsSliser';
 import PropTypes from 'prop-types';
 import css from 'components/ContactsForm/ContactsForm.module.css';
 
-export default function ContactsForm({ onSubmit }) {
+export const ContactsForm = ({ onSubmit }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -75,7 +75,7 @@ export default function ContactsForm({ onSubmit }) {
       </button>
     </form>
   );
-}
+};
 
 ContactsForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
