@@ -30,7 +30,7 @@ export const Filter = () => {
   );
 };
 
-Filter.propTypes = {
-  value: PropTypes.string.isRequired,
-  changeFilter: PropTypes.func.isRequired,
-};
+// Filter.propTypes = {
+//   value: PropTypes.string.isRequired,
+//   changeFilter: PropTypes.func.isRequired,
+// };

@@ -7,13 +7,10 @@ const filterSlice = createSlice({
   initialState: filterInitialSate,
   reducers: {
     changeFilter: (state, action) => {
-      state.filter = `${state.filter}${action.payload}`;
-      console.log(state.filter);
-      return state.map(
-        contact =>
-          contact.name.inqlude(contact.filter) ||
-          contact.number.inqlude(contact.filter)
-      );
+      console.log(state);
+      console.log(action.payload);
+
+      return action.payload;
     },
   },
 });

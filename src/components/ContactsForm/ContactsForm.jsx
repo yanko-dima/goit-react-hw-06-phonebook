@@ -28,6 +28,7 @@ export const ContactsForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
+    // Need checkedContact and alert if contact already in state!!!
     dispatch(addContact(name, number));
 
     reset();
