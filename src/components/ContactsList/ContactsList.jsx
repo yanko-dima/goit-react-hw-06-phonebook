@@ -17,11 +17,12 @@ export const ContactsList = () => {
     );
   };
 
-  // console.log(visibleContacts());
+  console.log('contacts: ', contacts);
+  console.log('filter: ', filter);
 
   return (
     <ul className={css.contacts__list}>
-      {contacts.map(({ id, name, number }) => (
+      {visibleContacts().map(({ id, name, number }) => (
         <ContactsItem key={id} contactId={id} name={name} number={number} />
       ))}
     </ul>

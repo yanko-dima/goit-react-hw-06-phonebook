@@ -1,12 +1,15 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from 'redux/contactsSlice';
-import css from 'components/ContactsForm/ContactsForm.module.css';
+import { getContacts } from 'redux/selectors';
 import { Button } from 'components/Button/Button';
+import css from 'components/ContactsForm/ContactsForm.module.css';
+import { useLocalStorage } from 'hooks/useLocalStorage';
 
 export const ContactsForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+  const contacts = useSelector(getContacts);
 
   const dispatch = useDispatch();
 
@@ -28,8 +31,13 @@ export const ContactsForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    // Need checkedContact and alert if contact already in state!!!
-    dispatch(addContact(name, number));
+    const checkedContact = contacts.find(
+      contact => contact.name.toLowerCase() === name.toLowerCase()
+    );
+
+    checkedContact
+      ? alert(`${name} is already in contacts`)
+      : dispatch(addContact(name, number));
 
     reset();
   };
