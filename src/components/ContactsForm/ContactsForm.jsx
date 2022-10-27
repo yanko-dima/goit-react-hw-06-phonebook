@@ -4,11 +4,11 @@ import { addContact } from 'redux/contactsSlice';
 import { getContacts } from 'redux/selectors';
 import { Button } from 'components/Button/Button';
 import css from 'components/ContactsForm/ContactsForm.module.css';
-import { useLocalStorage } from 'hooks/useLocalStorage';
 
 export const ContactsForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+
   const contacts = useSelector(getContacts);
 
   const dispatch = useDispatch();
