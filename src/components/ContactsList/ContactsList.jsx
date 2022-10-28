@@ -7,7 +7,6 @@ import css from 'components/ContactsList/ContactsList.module.css';
 export const ContactsList = () => {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getFilterQuery);
-  console.log(contacts);
 
   const visibleContacts = () => {
     const normalizedFilter = filter.toLowerCase();
