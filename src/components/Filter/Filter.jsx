@@ -14,11 +14,11 @@ export const Filter = () => {
   };
 
   return (
-    <div className={css.filter}>
-      <label className={css.filter__label}>
-        {'Find contacts by name'}
+    <div className={css.wrapper}>
+      <label className={css.label}>
+        <span className={css.label}>{'Find contacts by name'}</span>
         <input
-          className={css.filter__input}
+          className={css.field}
           type="text"
           name="filter"
           value={filterValue}

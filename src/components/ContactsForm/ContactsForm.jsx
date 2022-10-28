@@ -48,8 +48,9 @@ export const ContactsForm = () => {
 
   return (
     <form className={css.form} onSubmit={handleSubmit}>
-      <label className={css.input__label}>
-        {'Name'}
+      <label className={css.field}>
+        <span className={css.label}>{'Name'}</span>
+
         <input
           className={css.input}
           type="text"
@@ -61,8 +62,9 @@ export const ContactsForm = () => {
           required
         />
       </label>
-      <label className={css.input__label}>
-        {'Number'}
+      <label className={css.field}>
+        <span className={css.label}>{'Number'}</span>
+
         <input
           className={css.input}
           type="tel"

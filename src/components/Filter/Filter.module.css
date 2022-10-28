@@ -1,22 +1,22 @@
-.filter {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 20px 15px 20px;
-  margin-bottom: 15px;
+.wrapper {
+  padding: 20px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 3px 3px hsl(0deg 0% 68% / 60%);
 }
 
-.filter__label {
-  color: #475a6a;
+.label {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+
   font-size: 16px;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
-.filter__input {
-  width: 100%;
-  margin-top: 5px;
-  padding: 2px;
+.field {
+  flex-grow: 1;
+  padding: 8px;
+  font: inherit;
 }

@@ -1,8 +1,10 @@
 .btn {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   color: inherit;
-  padding: 8px 12px;
-  border-radius: 3px;
+  margin: 0 auto;
+  padding: 8px 15px;
+  border-radius: 4px;
   border: none;
   font: inherit;
   cursor: pointer;
@@ -13,4 +15,10 @@
 .btn:hover {
   background-color: #21b8c5;
   color: #ffffff;
+}
+
+.btnText {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
 }

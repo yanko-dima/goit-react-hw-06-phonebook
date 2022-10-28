@@ -10,7 +10,7 @@ export const App = () => {
       <Layout>
         <Title>Phone Book</Title>
         <ContactsForm />
-        <SubTitle>Contactc</SubTitle>
+        <SubTitle>Contacts</SubTitle>
         <Filter />
         <ContactsList />
       </Layout>
