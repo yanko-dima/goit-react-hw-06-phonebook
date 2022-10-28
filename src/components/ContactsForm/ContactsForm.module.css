@@ -7,6 +7,7 @@
   border-radius: 5px;
   box-shadow: 0 2px 3px 3px hsl(0deg 0% 68% / 60%);
 }
+
 .input__label {
   display: flex;
   flex-direction: column;

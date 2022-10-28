@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addContact, getContacts } from 'redux/contactsSlice';
 import { Button } from 'components/Button/Button';
 import css from 'components/ContactsForm/ContactsForm.module.css';
+import { Title } from 'components/Title/Title';
 
 export const ContactsForm = () => {
   const [name, setName] = useState('');
