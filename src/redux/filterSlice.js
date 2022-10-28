@@ -17,3 +17,4 @@ const filterSlice = createSlice({
 
 export const { changeFilter } = filterSlice.actions;
 export const filterReduser = filterSlice.reducer;
+export const getFilterQuery = state => state.filter;
